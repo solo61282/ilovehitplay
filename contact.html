@@ -152,10 +152,14 @@
 
     <!-- Contact Form -->
     <div class="contact-form">
-        <form action="https://formsubmit.co/rafael@floridapunkarchivist.com" method="POST" onsubmit="window.location.href='thankyou.html'; return true;">
+        <form action="https://formsubmit.co/rafael@floridapunkarchivist.com" method="POST">
+            <!-- Form fields -->
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            
+            <!-- Hidden redirect on success -->
+            <input type="hidden" name="_next" value="https://ilovehitplay.com/thankyou.html">
             <button type="submit">Send Message</button>
         </form>
     </div>
