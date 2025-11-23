@@ -3,91 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message Sent - Hit Play</title>
+  <meta name="description" content="Thank you for contacting Hit Play. Your message has been received.">
+  <title>Message Sent – Hit Play</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: Arial, sans-serif; 
-      background: #f7f9fc; 
-      color: #333; 
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f9fc;
+        color: #333;
+        line-height: 1.6;
     }
 
-    header { 
-      display: flex; justify-content: space-between; align-items: center; 
-      padding: 20px 40px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-      position: sticky; top: 0; z-index: 100;
-    }
-    header img { height: 50px; width: auto; }
-    nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
-    nav a:hover { color: #007BFF; }
-
-    main { 
-      max-width: 700px; 
-      margin: 80px auto; 
-      padding: 40px 20px; 
-      background: #fff; 
-      border-radius: 10px; 
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-      text-align: center; 
-    }
-    main h1 { font-size: 36px; margin-bottom: 20px; }
-    main p { font-size: 18px; margin-bottom: 30px; }
-
-    /* Button back to contact with same animation */
-    .back-button { 
-      display: inline-block; 
-      padding: 12px 25px; 
-      border-radius: 5px; 
-      background-color: #007BFF; 
-      color: #fff; 
-      font-weight: bold; 
-      text-decoration: none; 
-      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    .back-button:hover { 
-      background-color: #0056b3; 
-      transform: scale(1.05) rotate(-2deg); 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    header, main, footer {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    footer { 
-      text-align: center; 
-      padding: 20px; 
-      background-color: #ffffff; 
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
-      margin-top: 40px; 
+    /* HEADER */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
+    header img {
+        height: 50px;
+        width: auto;
+    }
+
+    nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #007BFF;
+    }
+
+    /* MAIN CONTENT */
+    main {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    main p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    /* Back Button */
+    .back-button {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .back-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05) rotate(-2deg);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        margin-top: 40px;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
-      nav { margin-top: 10px; }
-      nav a { margin-left: 0; margin-right: 15px; }
-      main { margin: 60px 20px; padding: 30px 15px; }
-      main h1 { font-size: 28px; }
-      main p { font-size: 16px; }
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+        main h1 {
+            font-size: 28px;
+        }
+        main p {
+            font-size: 16px;
+        }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <img src="images/hpclearlogo002.png" alt="Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="shows.html">Shows</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <img src="images/hpclearlogo002.png" alt="Hit Play band logo">
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shows.html">Shows</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <main>
-  <h1>Thank You!</h1>
-  <p>Your message has been sent successfully. We’ll get back to you soon.</p>
-  <a href="contact.html" class="back-button">Back to Contact</a>
+    <h1>Thank You!</h1>
+    <p>Your message has been sent successfully. We’ll get back to you soon.</p>
+    <a href="contact.html" class="back-button">Back to Contact</a>
 </main>
 
 <footer>
-  &copy; 2025 Hit Play. All rights reserved.
+    &copy; 2025 Hit Play. All rights reserved.
 </footer>
 
 </body>
