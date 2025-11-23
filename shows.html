@@ -1,85 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shows - Hit Play</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: Arial, sans-serif; 
-      background: linear-gradient(to bottom, #f7f9fc, #e0e7f1); 
-      color: #333; 
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="See past Hit Play shows, concerts, and performances from Miami and beyond.">
+    <title>Hit Play – Shows</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    header { 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      padding: 20px 40px; 
-      background-color: #ffffff; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-      position: sticky; 
-      top: 0;
-      z-index: 100;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    header img { height: 50px; width: auto; }
-    nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
-    nav a:hover { color: #007BFF; }
+        header, main, footer {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    main { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
-    h1 { text-align: center; margin-bottom: 40px; font-size: 36px; }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-    .show-list { list-style: none; padding: 0; }
-    .show-item { 
-      background: #fff; 
-      margin-bottom: 15px; 
-      padding: 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .show-item:nth-child(even) { background: #f1f4f8; } 
-    .show-item:hover { 
-      transform: translateY(-3px); 
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
-    }
+        header img {
+            height: 50px;
+            width: auto;
+        }
 
-    .show-item h3 { margin-bottom: 8px; font-size: 20px; color: #222; }
-    .show-item p { margin-bottom: 5px; }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-    footer { 
-      text-align: center; 
-      padding: 20px; 
-      background-color: #ffffff; 
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
-      margin-top: 40px; 
-    }
+        nav a:hover,
+        nav a.active {
+            color: #007BFF;
+        }
 
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
-      nav { margin-top: 10px; }
-      nav a { margin-left: 0; margin-right: 15px; }
-      .show-item { padding: 15px; }
-      h1 { font-size: 28px; }
-    }
-  </style>
+        main {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+
+        .show-list {
+            list-style: none;
+            padding: 0;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .show-item {
+            background: #ffffff;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .show-item:nth-child(even) {
+            background: #f1f4f8;
+        }
+
+        .show-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .show-item h3 {
+            margin-bottom: 8px;
+            font-size: 20px;
+            color: #222;
+        }
+
+        .show-item p {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 10px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .show-item {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <img src="images/hpclearlogo002.png" alt="Logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shows.html">Shows</a>
-      <a href="contact.html">Contact</a>
+<header>
+    <img src="images/hpclearlogo002.png" alt="Hit Play band logo">
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shows.html" class="active">Shows</a>
+        <a href="contact.html">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <main>
+<main>
     <h1>Hit Play Shows</h1>
+
     <ul class="show-list">
 
       <li class="show-item">
@@ -244,11 +301,11 @@
       </li>
 
     </ul>
-  </main>
+</main>
 
-  <footer>
+<footer>
     &copy; 2025 Hit Play. All rights reserved.
-  </footer>
+</footer>
 
 </body>
 </html>
