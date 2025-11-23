@@ -1,1 +1,117 @@
-shows page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hit Play Shows</title>
+
+<!-- TailwindCSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+/* List layout */
+.event-row {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 150px;
+    gap: 1rem;
+}
+@media(max-width: 900px){
+    .event-row {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+<header class="bg-gray-900 text-white py-8 text-center shadow">
+    <h1 class="text-4xl font-bold tracking-wide">Hit Play Shows History</h1>
+</header>
+
+<div class="max-w-6xl mx-auto p-6">
+    
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        
+        <!-- Column Headings -->
+        <div class="hidden md:grid event-row bg-gray-800 text-white py-3 px-4 text-sm font-semibold">
+            <div>Date</div>
+            <div>City / Venue</div>
+            <div>Other Bands</div>
+            <div>Price</div>
+        </div>
+
+        <div id="events"></div>
+    </div>
+
+</div>
+
+
+<script>
+// -------------------------
+// EVENT DATA
+// -------------------------
+const events = [
+    { date: "11.20.2009", city: "Miami, FL", venue: "Churchill's Pub", lineup: "Mad Martigan, Furious Dudes", price: "$5" },
+    { date: "01.16.2010", city: "Coral Gables, FL", venue: "Jada Cole", lineup: "Arsenal88 (First Show), Furious Dudes + Others", price: "FREE SHOW" },
+    { date: "03.27.2010", city: "Miami, FL", venue: "Kaffe Krystal", lineup: "Tokyo Monster Control (CD Release Show)", price: "$10" },
+    { date: "04.02.2010", city: "Miami, FL", venue: "Churchill's Pub", lineup: "Jacob's Ladder, The Shoreline", price: "$10" },
+    { date: "05.22.2010", city: "Kendall, FL", venue: "German American Club", lineup: "Rock for Sandor Benefit Concert", price: "$10" },
+    { date: "05.27.2010", city: "Miami, FL", venue: "Hot Topic (Dolphin Mall)", lineup: "Acoustic Performance (7–9 pm)", price: "FREE SHOW" },
+    { date: "07.31.2010", city: "Miami, FL", venue: "Churchills Pub", lineup: "Glasseater, Arsenal88, Furious Dudes, Homestretch", price: "$12" },
+    { date: "08.14.2010", city: "Miami, FL", venue: "The Shack Annex", lineup: "HIT, PLAY! CD RELEASE SHOW w/ Arsenal88, Low Visibility, Jem Marie", price: "$10" },
+    { date: "12.04.2010", city: "Miami, FL", venue: "Art Basel", lineup: "Floyd The Artist", price: "FREE" },
+    { date: "01.15.2011", city: "Dania Beach, FL", venue: "Monterey Club", lineup: "Attention Radio, Ex-Norwegian, Jacob Jeffrie's Band", price: "$5" },
+    { date: "01.21.2011", city: "Miami, FL", venue: "The Shack Annex", lineup: "Morning War, Turnaround Sunshine, 10FM", price: "FREE" },
+    { date: "04.08.2011", city: "Miami, FL", venue: "Churchill's Pub", lineup: "Jacob's Ladder EP Release Show", price: "$5" },
+    { date: "10.21.2011", city: "Miami, FL", venue: "Churchill's Pub", lineup: "Hialeah Fest Day 1 w/ Humbert + Many More", price: "$5" },
+    { date: "12.03.2011", city: "Miami, FL", venue: "S Bar", lineup: "Turnaround Sunshine, 2 other bands", price: "$5" },
+    { date: "12.09.2011", city: "Fort Lauderdale, FL", venue: "Monterey Club", lineup: "Fallen From The Sky, Break on Through, Turnaround Sunshine", price: "$5" },
+    { date: "12.31.2011", city: "Lake Worth, FL", venue: "Propaganda", lineup: "Dead To Me, Cobra Skulls, Routine Scheme + 2 Others", price: "$15 Presale / $20 Door" },
+    { date: "01.06.2012", city: "Fort Lauderdale, FL", venue: "Mikeshed's House Party", lineup: "Askultura", price: "VIP Only" },
+    { date: "03.10.2012", city: "Hialeah, FL", venue: "The Shack Annex", lineup: "Fallen From The Sky, Arsenal88, Plains, Pool Party", price: "$10" },
+    { date: "04.27.2012", city: "Miami, FL", venue: "Churchills Pub", lineup: "Askultura, J. Valor Band, Others", price: "$5" },
+    { date: "06.16.2012", city: "Miami, FL", venue: "Revolution Live Patio", lineup: "The Bouncing Souls, The Menzingers", price: "$25" },
+    { date: "07.01.2012", city: "Miami, FL", venue: "Miami Airport Convention Center", lineup: "Florida Supercon w/ Less Than Jake (6:30pm – Hall 200)", price: "Varies" },
+    { date: "09.22.2012", city: "Miami, FL", venue: "Churchill's Pub", lineup: "Supersuckers, Middle Finger Mob + Others", price: "$13 Adv / $15 Door" },
+    { date: "07.07.2013", city: "Miami, FL", venue: "Miami Airport Convention Center", lineup: "Green Jelly + Others", price: "Prices Vary" }
+];
+
+// Convert MM.DD.YYYY → JS Date safely
+function parseDate(d) {
+    const [m, day, y] = d.split(".");
+    return new Date(Number(y), Number(m) - 1, Number(day));
+}
+
+// Sort NEWEST → OLDEST
+events.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+// Render rows
+const container = document.getElementById("events");
+
+events.forEach(ev => {
+    const row = document.createElement("div");
+
+    row.className = 
+        "event-row border-b border-gray-200 hover:bg-gray-50 transition p-4 text-sm";
+
+    row.innerHTML = `
+        <div class="font-semibold text-gray-800">${ev.date}</div>
+
+        <div>
+            <div class="font-semibold">${ev.city}</div>
+            <div class="text-gray-600">${ev.venue}</div>
+        </div>
+
+        <div class="text-gray-700">${ev.lineup}</div>
+
+        <div class="font-bold text-gray-900">${ev.price}</div>
+    `;
+
+    container.appendChild(row);
+});
+</script>
+
+</body>
+</html>
