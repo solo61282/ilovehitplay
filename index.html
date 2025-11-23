@@ -30,8 +30,13 @@
         }
 
         header img {
-            height: 50px;
+            height: 80px; /* Increased logo size */
             width: auto;
+        }
+
+        /* Added margin to space out the nav from the logo on desktop */
+        nav {
+            margin-left: 40px;
         }
 
         nav a {
@@ -127,14 +132,17 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center; /* Center logo */
+                text-align: center; /* Center nav links */
             }
             nav {
-                margin-top: 10px;
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column; /* Stack nav links vertically */
+                align-items: center;
             }
             nav a {
-                margin-left: 0;
-                margin-right: 15px;
+                margin: 8px 0; /* Vertical spacing between links */
             }
             h1 {
                 font-size: 28px;
