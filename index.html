@@ -3,43 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hit Play</title>
+    <meta name="description" content="Hit Play is a punk rock band from Miami, FL delivering raw energy and unforgettable performances.">
+    <title>Hit Play – Home</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: #f7f9fc; color: #333; }
-        header { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        header img { height: 50px; width: auto; }
-        nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
-        nav a:hover { color: #007BFF; }
-        main { padding: 60px 20px; text-align: center; }
-        footer { text-align: center; padding: 20px; background-color: #ffffff; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); margin-top: 40px; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header, main, footer {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header img {
+            height: 50px;
+            width: auto;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #007BFF;
+        }
+
+        main {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
         @media (max-width: 768px) {
-            header { flex-direction: column; align-items: flex-start; }
-            nav { margin-top: 10px; }
-            nav a { margin-left: 0; margin-right: 15px; }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 10px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="images/hpclearlogo002.png" alt="Logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="shows.html">Shows</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header>
+    <img src="images/hpclearlogo002.png" alt="Hit Play band logo">
+    <nav aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="shows.html">Shows</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <main>
-        <h1>About Hit Play</h1>
-        <p>Hit Play is a punk rock band from Miami, FL. We bring raw energy and unforgettable performances wherever we go.</p>
-    </main>
+<main>
+    <h1>Welcome to Hit Play</h1>
+    <p>Hit Play is a punk rock band from Miami, FL. We bring raw energy and unforgettable performances wherever we go.</p>
+</main>
 
-    <footer>
-        &copy; 2025 Hit Play. All rights reserved.
-    </footer>
+<footer>
+    &copy; 2025 Hit Play. All rights reserved.
+</footer>
 
 </body>
 </html>
