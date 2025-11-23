@@ -21,11 +21,34 @@
     nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
     nav a:hover { color: #007BFF; }
 
-    main { max-width: 700px; margin: 80px auto; padding: 40px 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+    main { 
+      max-width: 700px; 
+      margin: 80px auto; 
+      padding: 40px 20px; 
+      background: #fff; 
+      border-radius: 10px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+      text-align: center; 
+    }
     main h1 { font-size: 36px; margin-bottom: 20px; }
     main p { font-size: 18px; margin-bottom: 30px; }
-    main a { text-decoration: none; color: #007BFF; font-weight: bold; }
-    main a:hover { color: #0056b3; }
+
+    /* Button back to contact with same animation */
+    .back-button { 
+      display: inline-block; 
+      padding: 12px 25px; 
+      border-radius: 5px; 
+      background-color: #007BFF; 
+      color: #fff; 
+      font-weight: bold; 
+      text-decoration: none; 
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .back-button:hover { 
+      background-color: #0056b3; 
+      transform: scale(1.05) rotate(-2deg); 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    }
 
     footer { 
       text-align: center; 
@@ -60,7 +83,7 @@
 <main>
   <h1>Thank You!</h1>
   <p>Your message has been sent successfully. We’ll get back to you soon.</p>
-  <a href="index.html">Return to Home</a>
+  <a href="contact.html" class="back-button">Back to Contact</a>
 </main>
 
 <footer>
