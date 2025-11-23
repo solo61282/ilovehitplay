@@ -1,218 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Hit Play! Updates</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    width: 900px;
-    margin: 20px auto;
-    overflow: auto;
-  }
-  #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  #header img {
-    height: 80px;
-  }
-  #header h1 {
-    font-size: 24px;
-    text-align: right;
-  }
-  #menu {
-    width: 200px;
-    float: left;
-    padding-right: 10px;
-  }
-  #menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  #menu ul li {
-    margin-bottom: 5px;
-  }
-  #menu ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-  }
-  #content {
-    width: 680px;
-    float: left;
-  }
-  .update {
-    border: 1px solid #000;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  .update-date {
-    color: #F00;
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
-  .update-content {
-    line-height: 1.5;
-    color: #999;
-  }
-  .update-content img, .update-content iframe {
-    display: block;
-    margin: 10px auto;
-    max-width: 100%;
-  }
-  .footer {
-    clear: both;
-    text-align: center;
-    font-size: 10px;
-    margin-top: 20px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit Play</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f7f9fc; color: #333; }
+        header { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        header img { height: 50px; width: auto; }
+        nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #007BFF; }
+        main { padding: 60px 20px; text-align: center; }
+        footer { text-align: center; padding: 20px; background-color: #ffffff; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); margin-top: 40px; }
+        @media (max-width: 768px) {
+            header { flex-direction: column; align-items: flex-start; }
+            nav { margin-top: 10px; }
+            nav a { margin-left: 0; margin-right: 15px; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+    <header>
+        <img src="images/hpclearlogo002.png" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shows.html">Shows</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <div id="header">
-    <div id="logo"><a href="index.html"><img src="site_templates/original-wizard-template/hpclearlogo002.png" alt="Hit Play! Logo"></a></div>
-    <h1>Hit Play! Punk Rock Music From Miami, Florida | Est. 2009</h1>
-  </div>
+    <main>
+        <h1>About Hit Play</h1>
+        <p>Hit Play is a punk rock band from Miami, FL. We bring raw energy and unforgettable performances wherever we go.</p>
+    </main>
 
-  <div id="menu">
-    <ul>
-      <li><a href="Products.html">Online Store</a></li>
-      <li><a href="shows.html">Shows</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="video.html">Video</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </div>
-
-  <div id="content">
-    
-    <!-- 2016 -->
-    <div class="update">
-      <div class="update-date">02.19.16</div>
-      <div class="update-content">
-        What's up everyone. Well we've been quiet for a couple of years with this website so I figured I would give you guys an update. We finally released our album CERTAIN SOUNDS on 7/18/2015. Listen to it in your favorite audio platform like Spotify and iTunes.
-      </div>
-    </div>
-
-    <!-- 2013 -->
-    <div class="update">
-      <div class="update-date">12.20.13</div>
-      <div class="update-content">
-        Hello everybody, Raf here with some major updates. First, we're excited to announce that the songs "Waiting for a Ride" and "A Pleasant View" have been chosen to be part of the video game <a href="https://en.ratrodstudio.com/games/skateparty2/" target="_blank">Skateboard Party 2</a> which was released today. It is available for Android, Windows Phone, iPhone, iPhone Touch, as well as iPads. The game is only $1.99!<br>
-        <img src="skateparty2_header1.jpg" alt="Skateboard Party 2"><br>
-        The other news is that we've finally finished the record. Jason Livermore from the Blasting Room did an excellent job mastering the record and we're extremely excited to share the album with everyone. We’re currently in the search for a label interested in putting out the record. In the meantime, Gaston put together a video for the song "Never Needed" which will appear in the new record. Check it out below.<br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/irfK6rZxjyo" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">08.13.13</div>
-      <div class="update-content">
-        Sup everyone! Things are going well here. The record has been mixed and now just waiting for the master from the blasting room. It sure sounds awesome and can't wait to share it with the world.<br>
-        No shows booked at this time but keep checking.
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">05.29.13</div>
-      <div class="update-content">
-        <strong>MAJOR UPDATE!!!</strong> We have finished tracking our upcoming full length record. The tracking was done at Pinecrust Studios in Miami by Ryan Haft and is currently being mixed by Darian Rundall (Credits include: Pennywise, Strung Out, Dokken) and will be mastered at the Blasting Room by Jason Livermore. We couldn't be happier to have such a good team working on our full length and we’re excited to release it. We're currently shopping around with labels all over the world.<br>
-        While waiting on the record to be mixed and mastered, we have been practicing and writing some new material as well as getting ready for Florida Supercon in July. Make sure you check us out as we'll be playing many songs from the upcoming album.<br>
-        Lastly, please vote Hit Play! into the warped by <a href="https://www.battleofthebands.com/u/HitPlay" target="_blank">clicking here.</a>
-      </div>
-      <div class="update-content">
-        <a href="https://www.battleofthebands.com/u/HitPlay" target="_blank"><img src="images/battleofthebandslogo.png" alt="Vote Hit Play!"></a>
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">02.12.13</div>
-      <div class="update-content">
-        Hey everyone! We're back from our short tour in the midwest and had an awesome time. We're currently recording our upcoming full length at Pinecrust Studios with Ryan Haft and the sessions are going great. No shows are scheduled at the moment but will update when they are.
-      </div>
-    </div>
-
-    <!-- 2012 -->
-    <div class="update">
-      <div class="update-date">10.04.12</div>
-      <div class="update-content">
-        Update! We just played a show at Mac's Club Deuce and it went great. We are currently writing more material for the upcoming full length. Thanks to everyone who came out!
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">06.20.12</div>
-      <div class="update-content">
-        Hello again, fans and friends! We have a new song up on our Bandcamp for listening called "Tomorrow" along with the other tracks. Check it out and support the band!<br>
-        <a href="https://hitplay.bandcamp.com" target="_blank"><img src="images/bandcamplogo.png" alt="Hit Play! Bandcamp"></a>
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">03.15.12</div>
-      <div class="update-content">
-        Sup everybody! We have been busy writing new songs for the upcoming full length. We are also planning to hit the road for some summer shows. More details coming soon.
-      </div>
-    </div>
-
-    <!-- 2011 -->
-    <div class="update">
-      <div class="update-date">12.21.11</div>
-      <div class="update-content">
-        Merry Christmas and Happy Holidays to all our fans! We released a special demo track for everyone to listen to during the holidays. Check it out on our media page.
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">07.05.11</div>
-      <div class="update-content">
-        Summer shows announced! Check the Shows page for dates and locations. Can't wait to see everyone out there!
-      </div>
-    </div>
-
-    <!-- 2010 -->
-    <div class="update">
-      <div class="update-date">11.23.10</div>
-      <div class="update-content">
-        New EP "Hit Play! Summer Sessions" released today! Listen and download from Bandcamp and iTunes. Thank you for the support!
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">08.15.10</div>
-      <div class="update-content">
-        Big thanks to everyone who came out to our shows this summer. We're taking a short break to work on new material for the next record.
-      </div>
-    </div>
-
-    <div class="update">
-      <div class="update-date">05.10.10</div>
-      <div class="update-content">
-        Sup everyone! Check out our latest video for the song "First Strike" on the Video page.
-      </div>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    &copy; Hit Play! 2009-2025
-  </div>
-
-</div>
+    <footer>
+        &copy; 2025 Hit Play. All rights reserved.
+    </footer>
 
 </body>
 </html>
