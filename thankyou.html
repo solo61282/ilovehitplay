@@ -5,26 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Message Sent - Hit Play</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
       font-family: Arial, sans-serif; 
-      background-color: #f7f9fc; 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      height: 100vh; 
-      text-align: center; 
+      background: linear-gradient(to bottom, #f7f9fc, #e0e7f1); 
       color: #333; 
     }
-    h1 { font-size: 36px; margin-bottom: 20px; }
-    p { font-size: 18px; margin-bottom: 20px; }
-    a { text-decoration: none; color: #007BFF; font-weight: bold; }
-    a:hover { color: #0056b3; }
+
+    header { 
+      display: flex; justify-content: space-between; align-items: center; 
+      padding: 20px 40px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+      position: sticky; top: 0; z-index: 100;
+    }
+    header img { height: 50px; width: auto; }
+    nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #007BFF; }
+
+    main { max-width: 700px; margin: 80px auto; padding: 40px 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+    main h1 { font-size: 36px; margin-bottom: 20px; }
+    main p { font-size: 18px; margin-bottom: 30px; }
+    main a { text-decoration: none; color: #007BFF; font-weight: bold; }
+    main a:hover { color: #0056b3; }
+
+    footer { 
+      text-align: center; 
+      padding: 20px; 
+      background-color: #ffffff; 
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
+      margin-top: 40px; 
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { margin-top: 10px; }
+      nav a { margin-left: 0; margin-right: 15px; }
+      main { margin: 60px 20px; padding: 30px 15px; }
+      main h1 { font-size: 28px; }
+      main p { font-size: 16px; }
+    }
   </style>
 </head>
 <body>
+
+<header>
+  <img src="images/hpclearlogo002.png" alt="Logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shows.html">Shows</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
   <h1>Thank You!</h1>
   <p>Your message has been sent successfully. We'll get back to you soon.</p>
   <a href="index.html">Return to Home</a>
+</main>
+
+<footer>
+  &copy; 2025 Hit Play. All rights reserved.
+</footer>
+
 </body>
 </html>
