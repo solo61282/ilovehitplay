@@ -1,93 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Hit Play</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background-color: #f7f9fc; color: #333; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Hit Play for booking, inquiries, or questions.">
+    <title>Hit Play – Contact</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    header { 
-      display: flex; justify-content: space-between; align-items: center; 
-      padding: 20px 40px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-      position: sticky; top: 0; z-index: 100;
-    }
-    header img { height: 50px; width: auto; }
-    nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
-    nav a:hover { color: #007BFF; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    main { max-width: 600px; margin: 60px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    h1 { text-align: center; margin-bottom: 30px; }
+        header, main, footer {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    form { display: flex; flex-direction: column; }
-    label { margin-bottom: 5px; font-weight: bold; }
-    input, textarea { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-    /* Submit button animation */
-    button { 
-      padding: 12px; 
-      border: none; 
-      border-radius: 5px; 
-      background-color: #007BFF; 
-      color: #fff; 
-      font-size: 16px; 
-      cursor: pointer; 
-      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; 
-    }
+        header img {
+            height: 50px;
+            width: auto;
+        }
 
-    button:hover { 
-      background-color: #0056b3; 
-      transform: scale(1.05) rotate(-2deg); 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
-    }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-    footer { text-align: center; padding: 20px; background-color: #ffffff; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); margin-top: 40px; }
+        nav a:hover,
+        nav a.active {
+            color: #007BFF;
+        }
 
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
-      nav { margin-top: 10px; }
-      nav a { margin-left: 0; margin-right: 15px; }
-      main { margin: 60px 20px; padding: 30px 15px; }
-      h1 { font-size: 28px; }
-    }
-  </style>
+        main {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        /* Contact Form Styling */
+        form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 10px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <img src="images/hpclearlogo002.png" alt="Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="shows.html">Shows</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <img src="images/hpclearlogo002.png" alt="Hit Play band logo">
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shows.html">Shows</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
 </header>
 
 <main>
-  <h1>Contact Hit Play</h1>
-  <form action="https://formsubmit.co/rafael@floridapunkarchivist.com" method="POST">
-    <!-- redirect to thank you page (absolute URL) -->
-    <input type="hidden" name="_next" value="https://ilovehitplay.com/thankyou.html">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Hit Play Contact Form">
+    <h1>Contact Hit Play</h1>
+    <p>For booking, questions, or general inquiries, feel free to reach out using the form below.</p>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+    <form action="submit_form.php" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
+        <button type="submit">Send Message</button>
+    </form>
 </main>
 
 <footer>
-  &copy; 2025 Hit Play. All rights reserved.
+    &copy; 2025 Hit Play. All rights reserved.
 </footer>
 
 </body>
