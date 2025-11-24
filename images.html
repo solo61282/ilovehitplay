@@ -67,7 +67,7 @@
 
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row by default */
             gap: 20px;
             max-width: 900px;
             margin: 0 auto;
@@ -102,6 +102,7 @@
             margin-top: 40px;
         }
 
+        /* Mobile Portrait Mode (max-width: 768px) */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -133,8 +134,9 @@
                 font-size: 16px;
             }
 
+            /* Change to 1 image per row on small screens (portrait mode) */
             .image-gallery {
-                grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+                grid-template-columns: 1fr; /* 1 image per row */
             }
         }
     </style>
@@ -161,62 +163,50 @@
 
     <!-- Image Gallery -->
     <div class="image-gallery">
-        <!-- Image Placeholder 1 -->
         <div class="image-item">
             <img src="images/underpaidorange.jpg" alt="Image 1">
         </div>
 
-        <!-- Image Placeholder 2 -->
         <div class="image-item">
             <img src="images/hitplaygroup.jpg" alt="Image 2">
         </div>
 
-        <!-- Image Placeholder 3 -->
         <div class="image-item">
             <img src="images/macbethscreams.jpg" alt="Image 3">
         </div>
 
-        <!-- Image Placeholder 4 -->
         <div class="image-item">
             <img src="images/raflagwagonshirt.jpg" alt="Image 4">
         </div>
 
-        <!-- Image Placeholder 5 -->
         <div class="image-item">
             <img src="images/group003.jpg" alt="Image 5">
         </div>
 
-        <!-- Image Placeholder 6 -->
         <div class="image-item">
             <img src="images/group002.jpg" alt="Image 6">
         </div>
 
-        <!-- Image Placeholder 7 -->
         <div class="image-item">
             <img src="images/macbeth001.jpg" alt="Image 7">
         </div>
 
-        <!-- Image Placeholder 8 -->
         <div class="image-item">
             <img src="images/gaston001.jpg" alt="Image 8">
         </div>
 
-        <!-- Image Placeholder 9 -->
         <div class="image-item">
             <img src="images/underpaid001.jpg" alt="Image 9">
         </div>
 
-        <!-- Image Placeholder 10 -->
         <div class="image-item">
             <img src="images/group001.jpg" alt="Image 10">
         </div>
 
-        <!-- Image Placeholder 11 -->
         <div class="image-item">
             <img src="images/solo001.jpg" alt="Image 11">
         </div>
 
-        <!-- Image Placeholder 12 -->
         <div class="image-item">
             <img src="images/alex001.jpg" alt="Image 12">
         </div>
