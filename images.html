@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of images for Hit Play band.">
+    <title>Hit Play – Image Gallery</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header, main, footer {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        header img {
+            height: 80px; /* Logo size same as homepage */
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #007BFF;
+        }
+
+        main {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .image-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .image-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .image-item {
+                width: 100%;
+                padding: 15px;
+            }
+
+            main p {
+                font-size: 16px;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="images/hpclearlogo002.png" alt="Hit Play band logo">
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Image Gallery</h1>
+    <p>Explore our collection of band photos and visuals from various events!</p>
+
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+        <!-- Image Placeholder 1 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 1">
+        </div>
+
+        <!-- Image Placeholder 2 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 2">
+        </div>
+
+        <!-- Image Placeholder 3 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 3">
+        </div>
+
+        <!-- Image Placeholder 4 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 4">
+        </div>
+
+        <!-- Image Placeholder 5 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 5">
+        </div>
+
+        <!-- Image Placeholder 6 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 6">
+        </div>
+
+        <!-- Image Placeholder 7 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 7">
+        </div>
+
+        <!-- Image Placeholder 8 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 8">
+        </div>
+
+        <!-- Image Placeholder 9 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 9">
+        </div>
+
+        <!-- Image Placeholder 10 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 10">
+        </div>
+
+        <!-- Image Placeholder 11 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 11">
+        </div>
+
+        <!-- Image Placeholder 12 -->
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 12">
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 Hit Play. All rights reserved.
+</footer>
+
+</body>
+</html>
